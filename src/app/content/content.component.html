@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <app-data [data]="data" (inputAdded) = "onUserInputAdded($event)" (rowDeleted) = "deleteRow($event)"> </app-data>
+    </div>
+    <div class="col-sm-6">
+      <app-charts [userInput]="userInput" [data]="data"> </app-charts>
+    </div>
+  </div>
+</div>

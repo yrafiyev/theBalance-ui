@@ -1,0 +1,26 @@
+<table id="table1" class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th> </th>
+      <th> Price </th>
+      <th> Date </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <button class="btn btn-success glyphicon glyphicon-plus" (click)="addUserInput($event)"> </button>
+       </td>
+      <td> <input type="number" class="form-control" id="price" (input)="onUpdatePrice($event)"> </td>
+      <td> <input type="date" class="form-control" id="date" (input)="onUpdateDate($event)"> </td>
+    </tr>
+    <tr *ngFor="let row of data">
+      <td>
+        <button class="btn btn-warning glyphicon glyphicon-pencil" (click)="editUserInput(row)"> </button>
+        <button class="btn btn-danger glyphicon glyphicon-trash" (click)="deleteUserInput(row)"> </button>
+      </td>
+      <td> {{row.price}} </td>
+      <td> {{row.date.toDateString()}} </td>
+    </tr>
+  </tbody>
+</table>
